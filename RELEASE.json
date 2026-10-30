@@ -1,17 +1,23 @@
 {
   "system": "EvidenceMemory",
-  "version": "text-http-lexical-v1",
+  "version": "multitrack-lexical-v1",
+  "tracks": [
+    "textual",
+    "coding",
+    "multimodal"
+  ],
   "retriever": "lexical",
   "embedding_model": null,
   "llm_model": null,
   "model_api_required": false,
-  "runtime_directory": "runtime-lexical",
-  "runtime_archive_sha256": "6dc05bcd28d3be02ee6d2364c9fbb907b6489b03f1f8468ee14ac762c7350cae",
-  "runtime_manifest_files": 53,
-  "deployed_image_id": "sha256:9fe9cb8524cdeb865a077d573579b0e4aa56d6e030d2c5bacab594e754a44bf5",
-  "previous_hybrid_runtime_directory": "runtime",
-  "previous_hybrid_tag": "text-http-hybrid-v8",
-  "source_publication_date": "2026-10-30",
+  "runtime_directory": "runtime-multitrack",
+  "runtime_archive_sha256": "cfc6617cd1de7cbe2f6e617882df27598c050d126a3cc18ef3b61f8fb1e16455",
+  "runtime_manifest_files": 50,
+  "deployed_image_id": "sha256:98c44249eaa4a180536e8b5ee855b304617e46408136992533657cc122092fa4",
+  "previous_tags": [
+    "text-http-lexical-v1",
+    "text-http-hybrid-v8"
+  ],
   "excluded": [
     "credentials",
     "benchmark data",

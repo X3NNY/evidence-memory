@@ -1,0 +1,26 @@
+services:
+  memory:
+    build: .
+    restart: unless-stopped
+    init: true
+    read_only: true
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    mem_limit: 1536m
+    cpus: 1.5
+    ports: ["127.0.0.1:8789:8787"]
+    environment:
+      AML_MEMORY_SYSTEM_KEY_FILE: /run/secrets/memory_system_key
+      AML_RETRIEVER: lexical
+      AML_ALLOW_EMBEDDING_API: "0"
+      AML_CODE_IDENTIFIERS: "1"
+      AML_CACHE_USERS: "2"
+    volumes:
+      - memory_data:/app/var
+      - ${AML_MEMORY_SYSTEM_KEY_FILE:?Set the dedicated service key file}:/run/secrets/memory_system_key:ro
+    tmpfs: ["/tmp:size=128m,noexec,nosuid"]
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+volumes:
+  memory_data:

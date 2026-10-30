@@ -1,0 +1,10 @@
+# Direct dependency versions used by the local regression environment.
+# Record the full pip freeze of a built image before declaring its version.
+numpy==1.26.4
+requests==2.33.1
+fastapi==0.124.2
+starlette==0.50.0
+pydantic==2.12.5
+pydantic_core==2.41.5
+uvicorn==0.29.0
+nltk==3.8.1
