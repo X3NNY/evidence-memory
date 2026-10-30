@@ -1,0 +1,16 @@
+{
+  "system": "EvidenceMemory",
+  "version": "text-http-hybrid-v8",
+  "runtime_archive_sha256": "ea2c9e1f1d1c1cdd42f7b67a1cdc24801f821bb00d071103e2febdc2285df2bb",
+  "runtime_manifest_files": 52,
+  "runtime_unchanged_from_deployed_release": true,
+  "deployed_image_id": "sha256:1091f116a22215e9f3b71695efde2c600a5393842554838f54a658f1ffb1955a",
+  "source_publication_date": "2026-10-30",
+  "excluded": [
+    "credentials",
+    "benchmark data",
+    "cached embeddings",
+    "raw questions",
+    "private evaluation outputs"
+  ]
+}

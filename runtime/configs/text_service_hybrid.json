@@ -1,0 +1,14 @@
+{
+  "embedding": {
+    "model": "text-embedding-v4",
+    "endpoint_env": "DASHSCOPE_EMBEDDING_URL",
+    "api_key_env": "DASHSCOPE_API_KEY",
+    "dimension": 1024,
+    "batch_size": 10,
+    "workers": 1,
+    "cache_dir": "var/provider-vector-cache",
+    "timeout_seconds": 30,
+    "max_retries": 2,
+    "min_request_interval_seconds": 0.1
+  }
+}
