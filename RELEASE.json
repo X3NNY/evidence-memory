@@ -1,16 +1,21 @@
 {
   "system": "EvidenceMemory",
-  "version": "text-http-hybrid-v8",
-  "runtime_archive_sha256": "ea2c9e1f1d1c1cdd42f7b67a1cdc24801f821bb00d071103e2febdc2285df2bb",
-  "runtime_manifest_files": 52,
-  "runtime_unchanged_from_deployed_release": true,
-  "deployed_image_id": "sha256:1091f116a22215e9f3b71695efde2c600a5393842554838f54a658f1ffb1955a",
+  "version": "text-http-lexical-v1",
+  "retriever": "lexical",
+  "embedding_model": null,
+  "llm_model": null,
+  "model_api_required": false,
+  "runtime_directory": "runtime-lexical",
+  "runtime_archive_sha256": "6dc05bcd28d3be02ee6d2364c9fbb907b6489b03f1f8468ee14ac762c7350cae",
+  "runtime_manifest_files": 53,
+  "deployed_image_id": "sha256:9fe9cb8524cdeb865a077d573579b0e4aa56d6e030d2c5bacab594e754a44bf5",
+  "previous_hybrid_runtime_directory": "runtime",
+  "previous_hybrid_tag": "text-http-hybrid-v8",
   "source_publication_date": "2026-10-30",
   "excluded": [
     "credentials",
     "benchmark data",
     "cached embeddings",
-    "raw questions",
-    "private evaluation outputs"
+    "private evaluation results"
   ]
 }

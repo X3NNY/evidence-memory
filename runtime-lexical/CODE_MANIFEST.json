@@ -1,0 +1,290 @@
+{
+  "version": "text-http-lexical-v1",
+  "body_weight": 0.0,
+  "dialogue_parent_body_weight": 0.5,
+  "dialogue_turn_bridge": true,
+  "source_window_consumer_budget_chars": 48000,
+  "session_frames": true,
+  "ranking_granularity_changed": true,
+  "atomic_journal_repository": true,
+  "source_evidence_pipeline": true,
+  "vector_read_batch": 200,
+  "quality_reference_version": "text-http-lexical-v1",
+  "comparison_baseline": "text-http-hybrid-v8",
+  "ranking_granularity_changed_from_previous": false,
+  "remote_enabled_by_default": false,
+  "retriever": "lexical",
+  "embedding_model": null,
+  "llm_model": null,
+  "embedding_cache_required": false,
+  "created_at": "2026-10-30T12:20:19.402864+00:00",
+  "files": {
+    ".dockerignore": {
+      "sha256": "31370f9ec7206853ce09310beb70005b6a4f129508ecb6253a07f87a19351830",
+      "bytes": 134,
+      "source": ".dockerignore"
+    },
+    "Dockerfile": {
+      "sha256": "d74ee9088d5af33cdcd6e45c33e05ee6c7c519e350c4ef16377f575404536762",
+      "bytes": 848,
+      "source": "deploy/lexical/Dockerfile"
+    },
+    "README.md": {
+      "sha256": "72a8a05ee80915308696c3d0438c9b3b3169942d4c679b26e2cc63be8ca38627",
+      "bytes": 2935,
+      "source": "docs/service_lexical_v1.md"
+    },
+    "compose.yaml": {
+      "sha256": "64ff7be83aa08a084f4dd1929e7102bafaf47d89f4b87c1155c080bb7b7788e0",
+      "bytes": 945,
+      "source": "deploy/lexical/compose.yaml"
+    },
+    "docs/deploy_text.md": {
+      "sha256": "10341460d0fe6efe72937a6f76d4fc8439936b6217ea5e1e93b9cff543e8c8e8",
+      "bytes": 5078,
+      "source": "docs/deploy_text.md"
+    },
+    "docs/hybrid_design.md": {
+      "sha256": "8a3058bdaff9a233512fd02373e687bfd5f136343701b529e3c13fd161fccdf2",
+      "bytes": 3884,
+      "source": "docs/hybrid_design.md"
+    },
+    "docs/service_lexical_v1.md": {
+      "sha256": "72a8a05ee80915308696c3d0438c9b3b3169942d4c679b26e2cc63be8ca38627",
+      "bytes": 2935,
+      "source": "docs/service_lexical_v1.md"
+    },
+    "docs/service_v3.md": {
+      "sha256": "8b72660a8acb73e0eb595d65550388f3e737a5d6b0f4a5f0f50bd87decc9b3c7",
+      "bytes": 2781,
+      "source": "docs/service_v3.md"
+    },
+    "docs/service_v4.md": {
+      "sha256": "d359c75ee4f7e94621bb1fe5a0453be9f9bdf4f433b02d6db14ded83b15c074b",
+      "bytes": 4417,
+      "source": "docs/service_v4.md"
+    },
+    "docs/service_v5.md": {
+      "sha256": "9468434e4885d49d83eb47206e895dcd120cde0c67c72d485feb9102bab65d64",
+      "bytes": 4280,
+      "source": "docs/service_v5.md"
+    },
+    "docs/service_v6.md": {
+      "sha256": "f146564c00b6eee821bb870f0538b2d583a6669f11df846906ab5eeb002e2373",
+      "bytes": 4324,
+      "source": "docs/service_v6.md"
+    },
+    "docs/service_v7.md": {
+      "sha256": "3d4a40d005d81893f4d20113c358e03e801e36d21c7817739ce95a64966a1041",
+      "bytes": 4416,
+      "source": "docs/service_v7.md"
+    },
+    "docs/service_v8.md": {
+      "sha256": "e3dda65a0a291fa0b6a24976b56830a200d366a51bedbc4c7fc930b1a16d0347",
+      "bytes": 5636,
+      "source": "docs/service_v8.md"
+    },
+    "memory_bench/__init__.py": {
+      "sha256": "a96654fac72dba2c6877ed3349edcd7766a14677c8fa3b21b9fb397692ddddf1",
+      "bytes": 72,
+      "source": "memory_bench/__init__.py"
+    },
+    "memory_bench/adapters/__init__.py": {
+      "sha256": "50503c9f0a518771ef6167316c12a8e36c413c83979495b8b4380e973fed6dc4",
+      "bytes": 70,
+      "source": "memory_bench/adapters/__init__.py"
+    },
+    "memory_bench/adapters/text/__init__.py": {
+      "sha256": "0008d34b2a064424c14c8343f19d567578a343e2d5ed3ca1a8d043009aae60ed",
+      "bytes": 201,
+      "source": "memory_bench/adapters/text/__init__.py"
+    },
+    "memory_bench/adapters/text/adapter.py": {
+      "sha256": "5f17f0218642167a45645af59f65b4edb2cc8045a82becd9bb31c6671b48242c",
+      "bytes": 2746,
+      "source": "memory_bench/adapters/text/adapter.py"
+    },
+    "memory_bench/adapters/text/adaptive_memory.py": {
+      "sha256": "22b6d9a9fb4f27349519c634bee193b3f35256f4cb4c5c544a58bb714df50177",
+      "bytes": 3617,
+      "source": "memory_bench/adapters/text/adaptive_memory.py"
+    },
+    "memory_bench/adapters/text/answering.py": {
+      "sha256": "2db01d3548b9394506301e84db49c191741bb5ff16e0c2ac5940cd5ca1351146",
+      "bytes": 13334,
+      "source": "memory_bench/adapters/text/answering.py"
+    },
+    "memory_bench/adapters/text/attributed_memory.py": {
+      "sha256": "21c8853c13d2fa92c5e62bab2dfa44982747dd50eba9e579b8975375825de888",
+      "bytes": 5555,
+      "source": "memory_bench/adapters/text/attributed_memory.py"
+    },
+    "memory_bench/adapters/text/benchmarks.py": {
+      "sha256": "7d21e120ac8384b6348fa605787c54513866b59773dcf3838cf957ea46748fd8",
+      "bytes": 2646,
+      "source": "memory_bench/adapters/text/benchmarks.py"
+    },
+    "memory_bench/adapters/text/coherent_memory.py": {
+      "sha256": "8d32575bd109ca9c027e9746d3d9947cbce5a4472dca68a86ab0846296155745",
+      "bytes": 3218,
+      "source": "memory_bench/adapters/text/coherent_memory.py"
+    },
+    "memory_bench/adapters/text/content_memory.py": {
+      "sha256": "9e36810fd52ed60b8f005c20c5253a20a163aca6553f5a30f3b0e8b6c6628792",
+      "bytes": 5341,
+      "source": "memory_bench/adapters/text/content_memory.py"
+    },
+    "memory_bench/adapters/text/session_packing.py": {
+      "sha256": "52214c6c26e7a86fd236435d7b35b276ad5d62a6edb656b8e250e8d9d992f8b0",
+      "bytes": 7409,
+      "source": "memory_bench/adapters/text/session_packing.py"
+    },
+    "memory_bench/adapters/text/structure.py": {
+      "sha256": "4980db87acc67385504c74a0c6cbd6c1818cdc74299e67a24edac452a2eba1b6",
+      "bytes": 15646,
+      "source": "memory_bench/adapters/text/structure.py"
+    },
+    "memory_bench/core/__init__.py": {
+      "sha256": "fd3aca4ec6767019321d5ffb531a52271ea6c61ac44536064b94c9c41048e561",
+      "bytes": 530,
+      "source": "memory_bench/core/__init__.py"
+    },
+    "memory_bench/core/context.py": {
+      "sha256": "2fa03386c4f4ed6841972ebece9219bd5628395fd3dfca67e75cb3b5b61b36a0",
+      "bytes": 3434,
+      "source": "memory_bench/core/context.py"
+    },
+    "memory_bench/core/engine.py": {
+      "sha256": "28db10cf213cafe406fe11760f805401e44b94f1bdc2686a8c4c0fb3b520c542",
+      "bytes": 4670,
+      "source": "memory_bench/core/engine.py"
+    },
+    "memory_bench/core/media.py": {
+      "sha256": "7376016cbf8f341c702236d8d404d074a992c849b09aead3f5526b65cbf12675",
+      "bytes": 2586,
+      "source": "memory_bench/core/media.py"
+    },
+    "memory_bench/core/models.py": {
+      "sha256": "d1ffa19fa465b82e586ea18ba688bcae1e3c8d08d239eb31488253351301f658",
+      "bytes": 1891,
+      "source": "memory_bench/core/models.py"
+    },
+    "memory_bench/core/offline.py": {
+      "sha256": "7924969e04ea969c85f7589e0bd3512e05d10183e7ed7dad33b7a0d46ad1d547",
+      "bytes": 663,
+      "source": "memory_bench/core/offline.py"
+    },
+    "memory_bench/core/protocols.py": {
+      "sha256": "fafd5aca9dc7a9492ceb7c1dce6d12dec5fdd445ef8aa75664c6fa5fa6bc8b90",
+      "bytes": 743,
+      "source": "memory_bench/core/protocols.py"
+    },
+    "memory_bench/core/records.py": {
+      "sha256": "42977f350efb31a0fa763ab93f7950ce0547031f924cdbe2c06946fc9d1d7fd6",
+      "bytes": 3296,
+      "source": "memory_bench/core/records.py"
+    },
+    "memory_bench/core/retrieval.py": {
+      "sha256": "735c2a779d829716063c80f26eae7d2118a8b13f9702ba9746daf0e1987e564e",
+      "bytes": 10440,
+      "source": "memory_bench/core/retrieval.py"
+    },
+    "memory_bench/embeddings.py": {
+      "sha256": "3c7ffbad502fd8c23410a718c93b8ecb93bd1203c817ddd3f96f2361a2e4988d",
+      "bytes": 19375,
+      "source": "memory_bench/embeddings.py"
+    },
+    "memory_bench/service/__init__.py": {
+      "sha256": "9bcf30d6ae39228586c7d56885253a08faa91295015365f83f486fae548b76e0",
+      "bytes": 84,
+      "source": "memory_bench/service/__init__.py"
+    },
+    "memory_bench/service/__main__.py": {
+      "sha256": "93c20102f8ebd2922b64feaff468034774dc500d58b32c7b4d81d8da9176a2de",
+      "bytes": 1051,
+      "source": "memory_bench/service/__main__.py"
+    },
+    "memory_bench/service/app.py": {
+      "sha256": "545a603501cd09f5b74e247b17d87cab7cca4656df8afb184abf79a3aa3823d5",
+      "bytes": 10510,
+      "source": "memory_bench/service/app.py"
+    },
+    "memory_bench/service/continuity.py": {
+      "sha256": "0ad1396b26d7ab14fa365fec9af1c9af76441c195d165f196c58ce3841c7b614",
+      "bytes": 3454,
+      "source": "memory_bench/service/continuity.py"
+    },
+    "memory_bench/service/dialogue.py": {
+      "sha256": "cbea538381e80ef0ead49cefb0b0b3d0d90fa459677802c117eb23cb72f24b66",
+      "bytes": 8704,
+      "source": "memory_bench/service/dialogue.py"
+    },
+    "memory_bench/service/evidence.py": {
+      "sha256": "5b1843679277b67c4315c43066817d48f0cbfbda61beef90c84eae46b2d205b8",
+      "bytes": 1169,
+      "source": "memory_bench/service/evidence.py"
+    },
+    "memory_bench/service/frames.py": {
+      "sha256": "f5a1fb71dff6e60d5fbe0907b7841a054e2a970f0ad6c617de7acfad66296711",
+      "bytes": 14124,
+      "source": "memory_bench/service/frames.py"
+    },
+    "memory_bench/service/models.py": {
+      "sha256": "773a9d660b0d61c4ecf85736e322a2935a4a4729b43f2a5715fa523b764c79bc",
+      "bytes": 2132,
+      "source": "memory_bench/service/models.py"
+    },
+    "memory_bench/service/offline.py": {
+      "sha256": "53af41a62c06c3d7dcd38c53513eda114a109d911a37c8ee5cccf6e8959b270f",
+      "bytes": 2226,
+      "source": "memory_bench/service/offline.py"
+    },
+    "memory_bench/service/repository.py": {
+      "sha256": "0dffa433aba72a8c4b4c4bd977f5e3f902557d8825a565bc68963884381e977a",
+      "bytes": 7933,
+      "source": "memory_bench/service/repository.py"
+    },
+    "memory_bench/service/responses.py": {
+      "sha256": "127e402b3477ee8b7400f8bb4b4a2bc508a9918924b931f6335471cb59f26a3f",
+      "bytes": 3541,
+      "source": "memory_bench/service/responses.py"
+    },
+    "memory_bench/service/retrieval.py": {
+      "sha256": "b9e3d30a2abcfd6fe4152dea6afed41799376cb86601bf3104e3910a757e92ae",
+      "bytes": 14025,
+      "source": "memory_bench/service/retrieval.py"
+    },
+    "memory_bench/service/store.py": {
+      "sha256": "f05f653bcde54597f51044933943130ff74b97e97fcb1522db76b32f9f46fcf6",
+      "bytes": 6997,
+      "source": "memory_bench/service/store.py"
+    },
+    "memory_bench/service/vectors.py": {
+      "sha256": "415601542f37f2f5996c9cb5faa39d3148f850b2b10823862a50087bbdc8d4a3",
+      "bytes": 9368,
+      "source": "memory_bench/service/vectors.py"
+    },
+    "memory_bench/service/windows.py": {
+      "sha256": "1c6778bf314568ec4aaf79f5b5660ab7a0a8424ab554ae05562ad329999fc1f0",
+      "bytes": 6606,
+      "source": "memory_bench/service/windows.py"
+    },
+    "pyproject.toml": {
+      "sha256": "143ee4a1169d916539febe0af4079e3271b40e370ae4523a69cd42b5302442b8",
+      "bytes": 621,
+      "source": "pyproject.toml"
+    },
+    "requirements-service.txt": {
+      "sha256": "3e6a9b5ac4a7a1774e215dc8f77304ad8c95991b96b93b9b28602c85b00e8079",
+      "bytes": 280,
+      "source": "requirements-service.txt"
+    },
+    "scripts/smoke_lexical_service.py": {
+      "sha256": "858de5d07500a6b0ba7ff5277b9417a8d3889045ac7d5a936195c2fbcc2cc09b",
+      "bytes": 7252,
+      "source": "scripts/smoke_lexical_service.py"
+    }
+  },
+  "contains_evaluation_data": false,
+  "contains_credentials": false
+}

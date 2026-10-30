@@ -1,5 +1,7 @@
 # Provenance and disclosure
 
+The current `text-http-lexical-v1` profile removes dense retrieval and all model-provider use. It reuses the shared source projection/evidence pipeline and adds fixed-weight raw/body-stemmed BM25 fusion for ordinary text. The earlier hybrid source remains frozen in `runtime/`; the new runtime is `runtime-lexical/`. No benchmark labels or question-ID conditions are introduced by this change.
+
 EvidenceMemory is an independent project implementation developed with AI coding assistance. It combines established retrieval techniques with deterministic dialogue-aware source evidence composition. It is not submitted as a reproduction of a single external paper.
 
 ## Design references

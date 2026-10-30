@@ -1,31 +1,39 @@
+name: evidence-memory-lexical
 services:
-  text-memory:
+  text-memory-lexical:
     build:
-      context: ./runtime
+      context: ./runtime-lexical
     restart: unless-stopped
-    command: ["python", "-m", "memory_bench.service", "--host", "0.0.0.0", "--port", "8787", "--database", "/app/var/text-hybrid-v8.sqlite3"]
+    init: true
+    read_only: true
     ports:
-      - "127.0.0.1:8787:8787"
+      - "127.0.0.1:8788:8787"
     environment:
       AML_MEMORY_SYSTEM_KEY_FILE: /run/secrets/memory_system_key
-      AML_RETRIEVER: hybrid
-      AML_EMBEDDING_CONFIG: /app/configs/text_service_hybrid.json
-      AML_EMBEDDING_MODE: "${AML_EMBEDDING_MODE:-cache_only}"
-      AML_ALLOW_EMBEDDING_API: "${AML_ALLOW_EMBEDDING_API:-0}"
-      DASHSCOPE_API_KEY: "${DASHSCOPE_API_KEY:-}"
-      DASHSCOPE_EMBEDDING_URL: "${DASHSCOPE_EMBEDDING_URL:-}"
-      AML_CACHE_USERS: "8"
-      AML_BODY_LEXICAL_WEIGHT: "${AML_BODY_LEXICAL_WEIGHT:-0}"
-      AML_QUERY_CACHE_ENTRIES: "${AML_QUERY_CACHE_ENTRIES:-16}"
-      AML_QUERY_CACHE_BYTES: "${AML_QUERY_CACHE_BYTES:-4194304}"
-      AML_WINDOW_CONTEXT_CHARS: "${AML_WINDOW_CONTEXT_CHARS:-48000}"
-      AML_SESSION_FRAMES: "${AML_SESSION_FRAMES:-1}"
+      AML_RETRIEVER: lexical
+      AML_EMBEDDING_MODE: cache_only
+      AML_ALLOW_EMBEDDING_API: "0"
+      AML_CACHE_USERS: "2"
+      AML_QUERY_CACHE_ENTRIES: "16"
+      AML_QUERY_CACHE_BYTES: "4194304"
+      AML_WINDOW_CONTEXT_CHARS: "48000"
+      AML_SESSION_FRAMES: "1"
     secrets:
       - memory_system_key
     volumes:
-      - memory-data:/app/var
+      - lexical-data:/app/var
+    tmpfs:
+      - /tmp:size=128m,noexec,nosuid
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: 1536m
+    memswap_limit: 2048m
+    cpus: 1.5
+    pids_limit: 256
 secrets:
   memory_system_key:
     file: "${AML_MEMORY_SYSTEM_KEY_FILE:?Set the host key-file path}"
 volumes:
-  memory-data:
+  lexical-data:
